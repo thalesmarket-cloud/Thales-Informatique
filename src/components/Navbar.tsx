@@ -79,6 +79,38 @@ export default function Navbar({ onDemoClick }: NavbarProps) {
   };
 
   // --- REGISTRY DATA FOR NAVIGATION ---
+  const METIERS_MEGA = [
+    {
+      groupTitle: "Finance",
+      items: [
+        { name: "Comptabilité & Finance", subtitle: "Générale, analytique & budgétaire", path: "/metiers/comptabilite-finance" },
+        { name: "États Comptables & Fiscaux", subtitle: "Liasse fiscale & EDI Simpl-IS", path: "/metiers/etats-comptables-fiscaux" },
+        { name: "Expertise Comptable", subtitle: "Multi-dossiers & productivité", path: "/metiers/expertise-comptable" },
+        { name: "Immobilisations", subtitle: "Amortissements & d'actifs", path: "/metiers/immobilisations" },
+        { name: "Trésorerie", subtitle: "Liquidités & prévisions", path: "/metiers/tresorerie" },
+        { name: "TVA", subtitle: "Taxe encaissements & débits", path: "/metiers/tva" }
+      ]
+    },
+    {
+      groupTitle: "Opérations & ERP",
+      items: [
+        { name: "ERP", subtitle: "Gestion flux intégrée PME", path: "/metiers/erp" },
+        { name: "Gestion de Production", subtitle: "Nomenclatures & GPAO ateliers", path: "/metiers/gestion-production" },
+        { name: "CRM", subtitle: "Relation client & support SAV", path: "/metiers/crm" },
+        { name: "Reporting", subtitle: "Tableaux décisionnels Excel & BI", path: "/metiers/reporting" }
+      ]
+    },
+    {
+      groupTitle: "Ressources Humaines",
+      items: [
+        { name: "Paie & RH", subtitle: "Fiches payes & carrières", path: "/metiers/paie-rh" },
+        { name: "Démat RH", subtitle: "Coffre-fort & dématérialisation", path: "/metiers/demat-rh" },
+        { name: "Paie", subtitle: "Moteur fiscal IR & CNSS", path: "/metiers/paie" },
+        { name: "SIRH", subtitle: "Compétences GPEC & formations", path: "/metiers/sirh" }
+      ]
+    }
+  ];
+
   const SOLUTIONS_MEGA = [
     {
       groupTitle: "Solutions ERP",
@@ -204,6 +236,74 @@ export default function Navbar({ onDemoClick }: NavbarProps) {
               >
                 Accueil
               </Link>
+
+              {/* MÉTIERS (MEGA MENU) */}
+              <div
+                className="relative"
+                onMouseEnter={() => handleMouseEnter("metiers")}
+                onMouseLeave={handleMouseLeave}
+              >
+                <button
+                  className={`inline-flex items-center gap-1 px-3 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all cursor-pointer ${
+                    isActive("/metiers")
+                      ? "text-[#007BFF] bg-[#007BFF]/5 font-extrabold"
+                      : "text-slate-600 hover:text-[#003B7A] hover:bg-slate-50"
+                  }`}
+                >
+                  <span>Métiers</span>
+                  <ChevronDown className="h-3 w-3" />
+                </button>
+
+                <AnimatePresence>
+                  {activeMega === "metiers" && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 15 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 15 }}
+                      transition={{ duration: 0.15 }}
+                      className="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-[840px] rounded-2xl border border-slate-200 bg-white p-6 shadow-2xl z-50 grid grid-cols-12 gap-6"
+                    >
+                      {/* Left helper bar */}
+                      <div className="col-span-3 bg-gradient-to-b from-[#003B7A]/5 to-[#007BFF]/10 rounded-xl p-4 border border-blue-100 flex flex-col justify-between">
+                        <div>
+                          <span className="text-[9px] font-extrabold text-[#007BFF] uppercase tracking-widest block mb-1">CONFORMITÉ MAROC</span>
+                          <h4 className="text-xs font-black text-[#001B3A] uppercase mb-2">Nos Métiers</h4>
+                          <p className="text-[10px] text-slate-500 leading-relaxed font-semibold">Des configurations adaptées pour simplifier vos processus métiers quotidiens.</p>
+                        </div>
+                        <Link to="/metiers" className="inline-flex items-center gap-1 text-[10px] text-[#007BFF] font-black uppercase hover:underline mt-4">
+                          <span>Voir le hub</span>
+                          <ChevronRight className="h-3 w-3" />
+                        </Link>
+                      </div>
+
+                      {/* Right lists */}
+                      <div className="col-span-9 grid grid-cols-3 gap-4">
+                        {METIERS_MEGA.map((gp, sIdx) => (
+                          <div key={sIdx} className="space-y-2">
+                            <span className="text-[10px] font-black tracking-widest text-[#003B7A] uppercase border-b border-slate-100 pb-1 block">
+                              {gp.groupTitle}
+                            </span>
+                            <div className="space-y-1">
+                              {gp.items.map((it) => {
+                                return (
+                                  <Link
+                                    key={it.name}
+                                    to={it.path}
+                                    className="block p-1.5 rounded-lg hover:bg-slate-50 group transition-all text-left"
+                                  >
+                                    <p className="text-xs font-bold text-[#001B3A] group-hover:text-[#007BFF] transition-colors">{it.name}</p>
+                                    <p className="text-[9px] text-slate-400 font-semibold leading-tight line-clamp-1">{it.subtitle}</p>
+                                  </Link>
+                                );
+                              })}
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
 
               {/* SOLUTIONS (MEGA MENU) */}
               <div
@@ -558,6 +658,43 @@ export default function Navbar({ onDemoClick }: NavbarProps) {
               >
                 Accueil
               </Link>
+
+              {/* Métiers Accordion */}
+              <div className="border-b border-slate-100 pb-1">
+                <button
+                  onClick={() => toggleMobileAccordion("metiers")}
+                  className="flex w-full items-center justify-between py-2.5 px-3 rounded-lg text-left text-xs font-bold text-slate-800 hover:bg-slate-50 uppercase tracking-wider cursor-pointer"
+                >
+                  <span>Métiers</span>
+                  <ChevronDown className={`h-4 w-4 transition-transform ${activeMobileAccordion === "metiers" ? "rotate-180 text-[#007BFF]" : "text-slate-400"}`} />
+                </button>
+                <AnimatePresence>
+                  {activeMobileAccordion === "metiers" && (
+                    <motion.div
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: "auto" }}
+                      exit={{ opacity: 0, height: 0 }}
+                      className="px-4 py-1 space-y-3 shrink-0"
+                    >
+                      {METIERS_MEGA.map((gp) => (
+                        <div key={gp.groupTitle} className="space-y-1">
+                          <p className="text-[10px] font-extrabold text-[#003B7A] tracking-wider uppercase">{gp.groupTitle}</p>
+                          {gp.items.map((it) => (
+                            <Link
+                              key={it.name}
+                              to={it.path}
+                              onClick={() => setMobileMenuOpen(false)}
+                              className="block py-1.5 text-xs text-slate-600 hover:text-[#007BFF] font-semibold"
+                            >
+                              • {it.name}
+                            </Link>
+                          ))}
+                        </div>
+                      ))}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
 
               {/* Solutions Accordion */}
               <div className="border-b border-slate-100 pb-1">
