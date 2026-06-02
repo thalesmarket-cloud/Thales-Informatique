@@ -41,12 +41,15 @@ export default function Footer({ onNavClick, onDemoClick }: FooterProps) {
           
           {/* Col 1: Bio */}
           <div className="md:col-span-4 space-y-4">
-            <div className="flex items-center gap-2.5">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[#007BFF] p-2 text-white">
-                <Database className="h-5 w-5" />
-              </div>
-              <span className="text-lg font-black tracking-tight text-white uppercase">
-                THALÈS <span className="text-[#00D4FF] text-xs block font-extrabold tracking-widest">INFORMATIQUE</span>
+            <div className="flex flex-col gap-2">
+              <img
+                src="https://res.cloudinary.com/dmutnjgp8/image/upload/v1771338339/Logo_Thales_White_3_l4ut7h.png"
+                alt="Thalès Informatique"
+                referrerPolicy="no-referrer"
+                className="h-14 sm:h-16 w-auto object-contain self-start"
+              />
+              <span className="text-[9px] text-[#00D4FF] font-black tracking-widest uppercase pl-1">
+                Intégrateur Elite Sage au Maroc
               </span>
             </div>
             

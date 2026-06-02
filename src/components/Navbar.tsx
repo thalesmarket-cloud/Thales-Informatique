@@ -173,34 +173,25 @@ export default function Navbar({ onDemoClick }: NavbarProps) {
         id="app-header"
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between lg:grid lg:grid-cols-3 lg:items-center">
             
             {/* Logo */}
             <a
               href="/"
               onClick={handleHomeClick}
-              className="flex items-center gap-2.5 group cursor-pointer"
+              className="flex items-center gap-3 group cursor-pointer justify-start"
               id="brand-logo"
             >
-              <div className="relative flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-[#003B7A] to-[#007BFF] p-2 text-white shadow-md transition-transform group-hover:scale-105">
-                <Database className="h-5 w-5" />
-                <span className="absolute -top-1 -right-1 h-3.5 w-3.5 rounded-full border border-white bg-[#00D4FF] flex items-center justify-center text-[8px] font-black text-[#001B3A]">
-                  30
-                </span>
-              </div>
-              <div className="flex flex-col">
-                <span className="text-base font-extrabold tracking-tight text-[#003B7A] leading-4">
-                  THALÈS
-                  <span className="text-[#007BFF] ml-1 font-light block sm:inline">INFORMATIQUE</span>
-                </span>
-                <span className="text-[8px] text-slate-500 font-bold tracking-wide uppercase">
-                  Intégrateur Elite Sage au Maroc
-                </span>
-              </div>
+              <img
+                src="https://res.cloudinary.com/dmutnjgp8/image/upload/v1772030743/logo_thal%C3%A8s_1_tkhzkc.png"
+                alt="Thalès Informatique"
+                referrerPolicy="no-referrer"
+                className="h-10 sm:h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.03]"
+              />
             </a>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center gap-1" id="desktop-menu">
+            <nav className="hidden lg:flex items-center justify-center gap-1" id="desktop-menu">
               
               {/* ACCUEIL */}
               <Link
@@ -514,14 +505,7 @@ export default function Navbar({ onDemoClick }: NavbarProps) {
             </nav>
 
             {/* CTA & hotline */}
-            <div className="hidden lg:flex items-center gap-4" id="desktop-ctas">
-              <a
-                href="tel:+212522548780"
-                className="flex items-center gap-1.5 text-xs font-bold text-slate-600 hover:text-[#007BFF] transition-colors"
-              >
-                <PhoneCall className="h-4 w-4 text-[#007BFF] animate-pulse" />
-                <span className="font-mono">+212 5 22 54 87 80</span>
-              </a>
+            <div className="hidden lg:flex items-center justify-end gap-4" id="desktop-ctas">
               <button
                 onClick={() => onDemoClick()}
                 className="bg-[#003B7A] text-white px-5 py-2.5 rounded-full text-xs font-extrabold shadow-md shadow-[#003B7A]/15 hover:bg-[#007BFF] hover:shadow-lg transition-all cursor-pointer"
