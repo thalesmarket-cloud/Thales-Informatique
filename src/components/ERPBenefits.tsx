@@ -22,7 +22,7 @@ export default function ERPBenefits() {
             Mesurez l'impact immédiat sur vos marges
           </h2>
           <p className="text-slate-600 font-medium text-sm leading-relaxed">
-            Découvrez comment Thalès configure de réels gains de productivité opérationnels. 
+            Découvrez comment Thalès Informatique configure de réels gains de productivité opérationnels. 
             Comparez le quotidien de vos services avec ou sans outil Sage intégré.
           </p>
         </div>

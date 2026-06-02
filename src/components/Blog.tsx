@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "motion/react";
 import { Clock, Calendar, ArrowRight, X, Heart, MessageSquare, ClipboardCheck } from "lucide-react";
 import { BLOG_POSTS } from "../data";
@@ -29,14 +30,40 @@ const ARTICLE_BODIES: Record<string, { body: string; tips: string[] }> = {
       "Automatisez l'envoi hebdomadaire des résultats clés aux décideurs de l'entreprise.",
       "Formez vos analystes à l'interrogation directe via l'environnement sécurisé Excel."
     ]
+  },
+  "blog-4": {
+    body: "La réforme de la facturation électronique au Maroc s'annonce comme un tournant fiscal majeur. Afin d'éviter tout rejet de factures par la Direction Générale des Impôts (DGI) ou vos partenaires grands comptes, vos ERP doivent intégrer la génération de fichiers XML certifiés et la gestion de signatures cryptographiques. Paramétrer ce protocole sous Sage 100 ou Sage X3 garantit la traçabilité des échanges commerciaux en temps réel et prévient les risques de redressement fiscal.",
+    tips: [
+      "Vérifiez que votre version de Sage prend en charge la signature électronique locale.",
+      "Mettez en place un flux de validation automatisé pour chaque facture émise.",
+      "Formez vos équipes de facturation aux protocoles de rejet et processus correctifs."
+    ]
+  },
+  "blog-5": {
+    body: "La paie au Maroc exige une rigueur absolue en raison de calculs complexes (taux d'impôt sur le revenu progressif, barème de congé maladie, plafonds CNSS et déclarations Damancom, AMO, CIMR). Un progiciel de paie mal configuré peut causer d'importants retards ou pénalités de contrôle CNSS. Automatiser ces variables sous Sage Paie & RH avec les modèles pré-configurés de Thalès Informatique permet de fiabiliser les retenues à la source.",
+    tips: [
+      "Intégrez un calendrier légal de veille réglementaire pour appliquer les nouvelles tranches IR d'office.",
+      "Mettez en place l'exportation automatique du fichier Damancom pour éviter la saisie manuelle mensuelle.",
+      "Automatisez le calcul de la prime d'ancienneté obligatoire (5%, 10%, 15%, 20%, 25% selon l'ancienneté)."
+    ]
+  },
+  "blog-6": {
+    body: "Pour les entreprises industrielles marocaines multi-sites (par exemple avec des dépôts à Casablanca, le port de Tanger Med et une usine à Kénitra), la fluidité des transferts de stocks est capitale. Une mauvaise coordination entraîne des ruptures d'approvisionnement ou des surstocks coûteux. Grâce au module de planification MRP de Sage X3 ou Sage 100, vous calculez vos besoins nets, gérez le stock de sécurité intelligemment et anticipez les livraisons inter-dépôts.",
+    tips: [
+      "Configurez des alertes automatiques par e-mail en cas de dépassement du stock d'alerte critique.",
+      "Utilisez des terminaux codes-barres mobiles synchronisés avec l'ERP pour toute entrée/sortie de dépôt.",
+      "Planifiez vos besoins nets basés sur un historique de demande saisonnière consolidé."
+    ]
   }
 };
 
 interface BlogProps {
   onDemoClick: (solutionId?: string) => void;
+  limit?: number;
 }
 
-export default function Blog({ onDemoClick }: BlogProps) {
+export default function Blog({ onDemoClick, limit }: BlogProps) {
+  const displayedPosts = limit ? BLOG_POSTS.slice(0, limit) : BLOG_POSTS;
   const [selectedArticle, setSelectedArticle] = useState<BlogPost | null>(null);
 
   const handleOpenArticle = (post: BlogPost) => {
@@ -60,7 +87,7 @@ export default function Blog({ onDemoClick }: BlogProps) {
             NOTRE ACTUALITÉ ERP & PILOTAGE
           </span>
           <h2 className="text-3xl font-extrabold tracking-tight text-[#001B3A] sm:text-4xl">
-            Le Blog Décisionnel de Thalès
+            Le Blog Décisionnel de Thalès Informatique
           </h2>
           <p className="text-slate-600 font-medium text-sm leading-relaxed">
             Retrouvez les conseils juridiques, réglementaires, technologiques et logistiques 
@@ -70,7 +97,7 @@ export default function Blog({ onDemoClick }: BlogProps) {
 
         {/* Articles Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="blog-grid">
-          {BLOG_POSTS.map((post) => (
+          {displayedPosts.map((post) => (
             <motion.article
               key={post.id}
               whileHover={{ y: -6 }}
@@ -129,6 +156,18 @@ export default function Blog({ onDemoClick }: BlogProps) {
             </motion.article>
           ))}
         </div>
+
+        {limit && BLOG_POSTS.length > limit && (
+          <div className="text-center mt-12">
+            <Link
+              to="/blog"
+              className="inline-flex h-11 items-center justify-center gap-2 rounded-xl bg-[#003B7A] px-8 text-xs font-bold text-white shadow-lg shadow-blue-900/10 hover:bg-[#007BFF] hover:shadow-xl transition-all duration-300 cursor-pointer"
+            >
+              <span>Voir tous nos articles</span>
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+        )}
 
         {/* Dynamic Reader Dialog Panel */}
         <AnimatePresence>
@@ -196,7 +235,7 @@ export default function Blog({ onDemoClick }: BlogProps) {
                   <div className="mt-6 rounded-xl bg-slate-50 border border-slate-200 p-5">
                     <h4 className="flex items-center gap-2 text-xs font-black uppercase tracking-wider text-[#007BFF] mb-3">
                       <ClipboardCheck className="h-4 w-4" />
-                      Recommandation officielle Thalès :
+                      Recommandation officielle Thalès Informatique :
                     </h4>
                     <ul className="space-y-2">
                       {(ARTICLE_BODIES[selectedArticle.id]?.tips || []).map((tip, i) => (

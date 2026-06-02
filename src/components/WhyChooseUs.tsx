@@ -68,7 +68,7 @@ export default function WhyChooseUs() {
               {/* Minimal footer layout */}
               <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-[10px] text-slate-400 font-bold uppercase tracking-wider">
                 <span>Pilier d'engagement {idx+1}</span>
-                <span className="text-[#007BFF] uppercase font-bold">Thalès Maroc</span>
+                <span className="text-[#007BFF] uppercase font-bold">Thalès Informatique</span>
               </div>
             </motion.div>
           ))}

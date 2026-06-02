@@ -101,7 +101,7 @@ export const PAGES_REGISTRY: Record<string, PageConfig> = {
     description: "Évitez la ressaisie laborieuse de fichiers d'activité. Sage BI interroge en direct vos progiciels Sage pour éditer des rapports de rentabilité financière et commerciale esthétiques, d'un seul clic depuis votre interface Excel habituelle.",
     highlights: [
       "Interrogation directe des flux de comptabilité à la seconde près",
-      "Modèles de rapports prêts à l'usage développés par Thalès",
+      "Modèles de rapports prêts à l'usage développés par Thalès Informatique",
       "Envois automatiques programmés par e-mail en fin de semaine"
     ],
     metric: { value: "3h", label: "Production de bilan hebdomadaire" },
@@ -392,7 +392,7 @@ export const PAGES_REGISTRY: Record<string, PageConfig> = {
     tagline: "Articles de fonds sur l'informatique de gestion et l'optimisation.",
     description: "Notre regard d'expert sur l'évolution technologique au Maroc. Découvrez comment optimiser vos balances de trésorerie interne, sécuriser vos fiches articles, et guider vos collaborateurs vers une saisie efficace.",
     highlights: [
-      "Articles rédigés par les consultants ingénieurs Thalès",
+      "Articles rédigés par les consultants ingénieurs de Thalès Informatique",
       "Analyses juridico-financières exclusives pour le marché local",
       "Astuces pour déceler les gaspillages de matières en industrie"
     ],
@@ -418,11 +418,11 @@ export const PAGES_REGISTRY: Record<string, PageConfig> = {
   },
   "/actualites": {
     path: "/actualites",
-    title: "Actualités Thalès & Sage",
+    title: "Actualités Thalès Informatique & Sage",
     parent: "Ressources",
     parentPath: "/ressources",
     tagline: "L'actualité de l'écosystème Sage et des évolutions de lois fiscales.",
-    description: "Suivez en direct l'intégration des nouvelles législations CNSS et IR, le calendrier des webinaires méthodologiques de Thalès, et l'actualité des nouvelles versions logicielles publiées sur l'écosystème Elite Sage.",
+    description: "Suivez en direct l'intégration des nouvelles législations CNSS et IR, le calendrier des webinaires méthodologiques de Thalès Informatique, et l'actualité des nouvelles versions logicielles publiées sur l'écosystème Elite Sage.",
     highlights: [
       "Alertes immédiates sur les évolutions légales ou douanières au Maroc",
       "Annonces exclusives de l'éditeur officiel Sage",
@@ -442,7 +442,7 @@ export const PAGES_REGISTRY: Record<string, PageConfig> = {
     highlights: [
       "Quel est le coût d'acquisition moyen d'un progiciel Sage au Maroc ?",
       "Quelle est la durée d'implémentation moyenne observée ?",
-      "Comment Thalès assure la reprise des anciennes écritures de paie ?"
+      "Comment Thalès Informatique assure la reprise des anciennes écritures de paie ?"
     ],
     metric: { value: "24/7", label: "Aide documentaire en ligne" },
     ctaText: "Consulter la base de connaissances",

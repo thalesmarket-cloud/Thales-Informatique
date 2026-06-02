@@ -88,7 +88,7 @@ export const SOLUTIONS: Solution[] = [
   {
     id: "conseil-accompagnement",
     name: "Conseil & Intégration",
-    category: "Services Thalès",
+    category: "Services Thalès Informatique",
     subtitle: "L'excellence méthodologique pour votre réussite.",
     description: "Bénéficiez de 30 ans d'expertise accumulée par nos ingénieurs consultants certifiés, pour un déploiement sécurisé, performant et sur-mesure.",
     features: [
@@ -176,7 +176,7 @@ export const TIMELINE_STEPS: TimelineStep[] = [
     description: "Formation de vos managers et collaborateurs terrain pour assurer une adoption rapide, intuitive et durable du nouvel outil.",
     details: [
       "Sessions de formation par services métiers",
-      "Remise de guides d'utilisation personnalisés Thalès",
+      "Remise de guides d'utilisation personnalisés de Thalès Informatique",
       "Recette globale de l'ERP avec vos référents"
     ]
   },
@@ -197,7 +197,7 @@ export const WHY_REASONS: WhyReason[] = [
   {
     id: "why-1",
     title: "30 Ans de Savoir-faire",
-    description: "Créé à l'aube de la transition technologique au Maroc, Thalès possède une connaissance intime des défis juridiques, comptables et logistiques du marché marocain.",
+    description: "Créé à l'aube de la transition technologique au Maroc, Thalès Informatique possède une connaissance intime des défis juridiques, comptables et logistiques du marché marocain.",
     iconName: "Award"
   },
   {
@@ -288,7 +288,7 @@ export const TESTIMONIALS: Testimonial[] = [
     role: "Directrice Générale",
     company: "Medina Pack",
     city: "Casablanca",
-    text: "Déployer Sage 100 avec Thalès Informatique a été un excellent levier de croissance pour notre industrie de packaging. Les équipes de Thalès comprennent parfaitement les réalités industrielles marocaines. Le service après-vente est ultra réactif et toujours disponible.",
+    text: "Déployer Sage 100 avec Thalès Informatique a été un excellent levier de croissance pour notre industrie de packaging. Les équipes de Thalès Informatique comprennent parfaitement les réalités industrielles marocaines. Le service après-vente est ultra réactif et toujours disponible.",
     image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=300&h=300",
     rating: 5
   },
@@ -341,6 +341,33 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "5 min de lecture",
     category: "Gestion & BI",
     image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80&w=600&h=400"
+  },
+  {
+    id: "blog-4",
+    title: "La réforme de la facturation électronique au Maroc : Comment vous y préparer ?",
+    summary: "Analyse des obligations fiscales de facturation digitale et étapes de conformité recommandées pour vos modules d'achats et de ventes Sage 100 ou Sage X3.",
+    date: "18 Avril 2026",
+    readTime: "7 min de lecture",
+    category: "Réglementation Maroc",
+    image: "https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&q=80&w=600&h=400"
+  },
+  {
+    id: "blog-5",
+    title: "Optimisation de la paie marocaine : Comment automatiser IGR & CNSS ?",
+    summary: "Un passage en revue des spécificités du calcul des primes d'ancienneté obligatoires et de l'encadrement des déclarations Damancom automatisées sous Sage Paie & RH.",
+    date: "26 Mars 2026",
+    readTime: "6 min de lecture",
+    category: "Ressources Humaines",
+    image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=600&h=400"
+  },
+  {
+    id: "blog-6",
+    title: "Logistique multisites & GPAO : Les secrets d'un stock fluide",
+    summary: "Comment paramétrer des alertes intelligentes sur stocks critiques, automatiser des bons de transferts inter-dépôts (Casablanca-Tanger) et optimiser la planification MRP.",
+    date: "10 Mars 2026",
+    readTime: "9 min de lecture",
+    category: "Industrie & Logistique",
+    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=600&h=400"
   }
 ];
 

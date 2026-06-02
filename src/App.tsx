@@ -103,7 +103,7 @@ export default function App() {
               <Testimonials />
 
               {/* 10. Educational Blog cards & Read draws */}
-              <Blog onDemoClick={handleOpenContact} />
+              <Blog onDemoClick={handleOpenContact} limit={3} />
 
               {/* 11. Final Conversion Trigger CTA */}
               <FinalCTA onDemoClick={() => handleOpenContact()} />

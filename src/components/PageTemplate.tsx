@@ -21,6 +21,7 @@ import {
   Database
 } from "lucide-react";
 import Footer from "./Footer";
+import Blog from "./Blog";
 
 interface PageTemplateProps {
   onDemoClick: (solutionId?: string) => void;
@@ -29,6 +30,22 @@ interface PageTemplateProps {
 export default function PageTemplate({ onDemoClick }: PageTemplateProps) {
   const { pathname } = useLocation();
   const pageData = PAGES_REGISTRY[pathname] || PAGES_REGISTRY["/solutions"];
+
+  if (pathname === "/blog") {
+    return (
+      <div className="relative min-h-screen bg-white text-[#001B3A] overflow-x-hidden antialiased pt-28 pb-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-6">
+          <nav className="flex items-center flex-wrap gap-1.5 text-xs font-bold text-slate-400 uppercase tracking-wider">
+            <Link to="/" className="hover:text-[#003B7A] transition-colors shrink-0">Accueil</Link>
+            <ChevronRight className="h-3 w-3 text-slate-300 shrink-0" />
+            <span className="text-[#007BFF] font-extrabold">Blog Décisionnel</span>
+          </nav>
+        </div>
+        <Blog onDemoClick={onDemoClick} />
+        <Footer onNavClick={() => {}} onDemoClick={onDemoClick} />
+      </div>
+    );
+  }
 
   // Automatically scroll to top when page changes
   useEffect(() => {
@@ -74,7 +91,7 @@ export default function PageTemplate({ onDemoClick }: PageTemplateProps) {
             <div className="lg:col-span-7 space-y-6">
               <span className="inline-flex items-center gap-1.5 rounded-full bg-[#007BFF]/10 px-3 py-1 text-xs font-extrabold text-[#007BFF] uppercase tracking-wider">
                 <Sparkles className="h-3.5 w-3.5" />
-                {pageData.category} • Thalès Maroc
+                {pageData.category} • Thalès Informatique Maroc
               </span>
 
               <h1 className="text-3xl font-black tracking-tight text-[#001B3A] sm:text-4xl md:text-5xl leading-tight">
@@ -275,7 +292,7 @@ export default function PageTemplate({ onDemoClick }: PageTemplateProps) {
                 Consignez votre projet de transition numérique
               </h3>
               <p className="text-xs text-slate-500 leading-relaxed font-semibold">
-                Complétez ces repères. Un ingénieur d'affaires certifié Thalès reviendra vers vous sous 4 heures pour soumettre un plan de démonstration ou de cadrage gratuit, adapté à votre effectif et vos progiciels actuels.
+                Complétez ces repères. Un ingénieur d'affaires certifié Thalès Informatique reviendra vers vous sous 4 heures pour soumettre un plan de démonstration ou de cadrage gratuit, adapté à votre effectif et vos progiciels actuels.
               </p>
 
               <div className="space-y-3.5 bg-white rounded-2xl p-5 border border-slate-200/80 shadow-sm text-xs font-semibold text-slate-600">

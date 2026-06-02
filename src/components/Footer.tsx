@@ -124,7 +124,7 @@ export default function Footer({ onNavClick, onDemoClick }: FooterProps) {
           {/* Col 4: Contact metrics */}
           <div className="md:col-span-3 space-y-4">
             <h4 className="text-xs font-extrabold text-white uppercase tracking-widest border-b border-[#003B7A] pb-2">
-              Thalès Maroc
+              Thalès Informatique
             </h4>
             <ul className="space-y-3 text-xs text-slate-300 font-semibold">
               <li className="flex gap-2.5 items-start">
