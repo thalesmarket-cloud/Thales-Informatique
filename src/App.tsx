@@ -14,6 +14,7 @@ import FinalCTA from "./components/FinalCTA";
 import Footer from "./components/Footer";
 import ContactModal from "./components/ContactModal";
 import PageTemplate from "./components/PageTemplate";
+import BlogPostPage from "./components/BlogPostPage";
 import { PAGES_REGISTRY } from "./dataPages";
 
 export default function App() {
@@ -113,6 +114,9 @@ export default function App() {
             </>
           }
         />
+
+        {/* DEDICATED BLOG POST PAGE */}
+        <Route path="/blog/:id" element={<BlogPostPage onDemoClick={handleOpenContact} />} />
 
         {/* CATCH ALL FALLBACK TO TEMPLATE */}
         <Route path="*" element={<PageTemplate onDemoClick={handleOpenContact} />} />
