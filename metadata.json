@@ -1,0 +1,6 @@
+{
+  "name": "Thalès Informatique",
+  "description": "Portail web premium de Thalès Informatique – Intégrateur d'ERP Sage et de solutions de gestion d'entreprise de référence au Maroc depuis plus de 30 ans.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
