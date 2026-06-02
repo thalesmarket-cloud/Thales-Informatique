@@ -17,7 +17,7 @@ export default function Footer({ onNavClick, onDemoClick }: FooterProps) {
     if (doc === "mentions") {
       setLegalDoc({
         title: "Mentions Légales — Thalès Informatique S.A.",
-        content: "Thalès Informatique S.A. au capital de 10.000.000 DH. Enregistré au Registre du Commerce de Casablanca sous le numéro RC 128475. Siège social : Boulevard d'Anfa, Résidence Elite, Ain Sebaâ, Casablanca, Maroc. Directeur de publication : M. El Alami, Président Directeur Général."
+        content: "Thalès Informatique S.A. au capital de 10.000.000 DH. Enregistré au Registre du Commerce de Casablanca sous le numéro RC 128475. Siège social : 310 Rue Hadj Omar Riffi, Casablanca, Maroc. Directeur de publication : M. El Alami, Président Directeur Général."
       });
     } else if (doc === "privacy") {
       setLegalDoc({
@@ -129,19 +129,19 @@ export default function Footer({ onNavClick, onDemoClick }: FooterProps) {
             <ul className="space-y-3 text-xs text-slate-300 font-semibold">
               <li className="flex gap-2.5 items-start">
                 <MapPin className="h-4 w-4 text-[#007BFF] shrink-0" />
-                <span>Boulevard d'Anfa, Résidence Elite, Ain Sebaâ, Casablanca, Maroc</span>
+                <span>310 Rue Hadj Omar Riffi, Casablanca, Maroc</span>
               </li>
               <li className="flex gap-2.5 items-center">
                 <Phone className="h-4 w-4 text-[#007BFF] shrink-0" />
-                <span>+212 522 45 46 47</span>
+                <span>+212 5 22 54 87 80</span>
               </li>
               <li className="flex gap-2.5 items-center">
                 <Mail className="h-4 w-4 text-[#007BFF] shrink-0" />
-                <span>contact@thales-informatique.ma</span>
+                <span>contact@thales.ma</span>
               </li>
               <li className="flex gap-2.5 items-center">
                 <Globe className="h-4 w-4 text-[#007BFF] shrink-0" />
-                <span>www.thales-informatique.ma</span>
+                <span>www.thales.ma</span>
               </li>
             </ul>
           </div>

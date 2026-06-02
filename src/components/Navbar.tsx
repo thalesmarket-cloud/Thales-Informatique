@@ -516,11 +516,11 @@ export default function Navbar({ onDemoClick }: NavbarProps) {
             {/* CTA & hotline */}
             <div className="hidden lg:flex items-center gap-4" id="desktop-ctas">
               <a
-                href="tel:+212522454647"
+                href="tel:+212522548780"
                 className="flex items-center gap-1.5 text-xs font-bold text-slate-600 hover:text-[#007BFF] transition-colors"
               >
                 <PhoneCall className="h-4 w-4 text-[#007BFF] animate-pulse" />
-                <span className="font-mono">+212 522 45 46 47</span>
+                <span className="font-mono">+212 5 22 54 87 80</span>
               </a>
               <button
                 onClick={() => onDemoClick()}
@@ -757,11 +757,11 @@ export default function Navbar({ onDemoClick }: NavbarProps) {
               {/* Bottom drawer elements */}
               <div className="pt-4 border-t border-slate-100 mt-4 flex flex-col gap-3">
                 <a
-                  href="tel:+212522454647"
+                  href="tel:+212522548780"
                   className="flex items-center gap-2 py-1 px-3 text-xs text-slate-700 hover:text-[#007BFF]"
                 >
                   <PhoneCall className="h-4 w-4 text-[#007BFF]" />
-                  <span className="font-mono">+212 522 45 46 47</span>
+                  <span className="font-mono">+212 5 22 54 87 80</span>
                 </a>
                 <button
                   onClick={() => {

@@ -253,7 +253,7 @@ export default function PageTemplate({ onDemoClick }: PageTemplateProps) {
               <ArrowRight className="h-4 w-4" />
             </button>
             <a
-              href="tel:+212522454647"
+              href="tel:+212522548780"
               className="w-full sm:w-auto inline-flex h-11 items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/5 hover:bg-white/10 px-6 text-xs font-black text-white transition-all"
             >
               Contacter le siège
@@ -281,15 +281,15 @@ export default function PageTemplate({ onDemoClick }: PageTemplateProps) {
               <div className="space-y-3.5 bg-white rounded-2xl p-5 border border-slate-200/80 shadow-sm text-xs font-semibold text-slate-600">
                 <div className="flex gap-2.5 items-center">
                   <Phone className="h-4 w-4 text-[#007BFF]" />
-                  <span>Assistance téléphonique : +212 522 45 46 47</span>
+                  <span>Assistance téléphonique : +212 5 22 54 87 80</span>
                 </div>
                 <div className="flex gap-2.5 items-center">
                   <Mail className="h-4 w-4 text-[#007BFF]" />
-                  <span>Messagerie officielle : contact@thales-informatique.ma</span>
+                  <span>Messagerie officielle : contact@thales.ma</span>
                 </div>
                 <div className="flex gap-2.5 items-start">
                   <MapPin className="h-4 w-4 text-[#007BFF]" />
-                  <span>Siège Social : Boulevard d'Anfa, Ain Sebaâ, Casablanca</span>
+                  <span>Siège Social : 310 Rue Hadj Omar Riffi, Casablanca</span>
                 </div>
               </div>
             </div>
