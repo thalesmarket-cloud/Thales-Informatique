@@ -20,7 +20,13 @@ import {
   Users,
   Settings,
   ShieldAlert,
-  ChevronRight
+  ChevronRight,
+  Cpu,
+  Wrench,
+  Coins,
+  Users2,
+  Landmark,
+  Wallet
 } from "lucide-react";
 
 interface NavbarProps {
@@ -113,28 +119,33 @@ export default function Navbar({ onDemoClick }: NavbarProps) {
 
   const SOLUTIONS_MEGA = [
     {
-      groupTitle: "Solutions ERP",
+      groupTitle: "ERP & Gestion",
+      icon: Cpu,
       items: [
-        { name: "Sage X3", subtitle: "Grandes entreprises & industries", path: "/solutions/sage-x3", icon: Workflow },
-        { name: "Sage 100", subtitle: "Gestion intégrée pour PME agiles", path: "/solutions/sage-100", icon: Settings }
+        { name: "Sage X3", subtitle: "Grandes entreprises & industries", path: "/solutions/sage-x3", icon: Landmark },
+        { name: "Sage 100", subtitle: "Gestion intégrée pour PME agiles", path: "/solutions/sage-100", icon: Settings },
+        { name: "Sage FRP 1000", subtitle: "Plateforme financière de groupe", path: "/solutions/sage-frp-1000", icon: Wallet }
       ]
     },
     {
-      groupTitle: "Gestion RH",
+      groupTitle: "Maintenance & Industrie",
+      icon: Wrench,
       items: [
-        { name: "Sage Paie & RH", subtitle: "Législation marocaine & CNDP", path: "/solutions/sage-paie-rh", icon: Users }
+        { name: "DimoMaint GMAO", subtitle: "Gestion de maintenance préventive", path: "/solutions/dimomaint-gmao", icon: Wrench }
       ]
     },
     {
-      groupTitle: "Relation Client",
+      groupTitle: "Gestion Financière",
+      icon: Coins,
       items: [
-        { name: "Sage CRM", subtitle: "Outils forces de vente & SAV", path: "/solutions/sage-crm", icon: HeartHandshake }
+        { name: "Eloficash", subtitle: "Recouvrement & Crédit client", path: "/solutions/eloficash", icon: Coins }
       ]
     },
     {
-      groupTitle: "Pilotage & Reporting",
+      groupTitle: "Ressources Humaines",
+      icon: Users2,
       items: [
-        { name: "Sage BI Reporting", subtitle: "Décisions stratégiques sur Excel", path: "/solutions/sage-bi-reporting", icon: BarChart3 }
+        { name: "Factorial", subtitle: "Espace Collaborateur & SIRH Cloud", path: "/solutions/factorial", icon: Users }
       ]
     }
   ];
@@ -329,50 +340,54 @@ export default function Navbar({ onDemoClick }: NavbarProps) {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 15 }}
                       transition={{ duration: 0.15 }}
-                      className="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-[720px] rounded-2xl border border-slate-200 bg-white p-6 shadow-2xl z-50 grid grid-cols-12 gap-6"
+                      className="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-[980px] rounded-2xl border border-slate-200 bg-white p-6 shadow-2xl z-50 grid grid-cols-12 gap-6"
                     >
                       {/* Left helper bar */}
                       <div className="col-span-3 bg-gradient-to-b from-[#003B7A]/5 to-[#007BFF]/10 rounded-xl p-4 border border-blue-100 flex flex-col justify-between">
                         <div>
-                          <span className="text-[9px] font-extrabold text-[#007BFF] uppercase tracking-widest block mb-2">SAGE ÉCOSYSTÈME</span>
-                          <h4 className="text-xs font-black text-[#001B3A] uppercase mb-2">Intégration Pro</h4>
-                          <p className="text-[10px] text-slate-500 leading-relaxed font-semibold">Toutes nos solutions comptent une intégration marocaine certifiée.</p>
+                          <span className="text-[9px] font-extrabold text-[#007BFF] uppercase tracking-widest block mb-1">NOS PROGICIELS</span>
+                          <h4 className="text-xs font-black text-[#001B3A] uppercase mb-2">Notre Portfolio</h4>
+                          <p className="text-[10px] text-slate-500 leading-relaxed font-semibold">Des configurations adaptées pour simplifier vos processus métiers quotidiens au Maroc.</p>
                         </div>
                         <Link to="/solutions" className="inline-flex items-center gap-1 text-[10px] text-[#007BFF] font-black uppercase hover:underline mt-4">
-                          <span>Voir tout</span>
+                          <span>Voir le hub</span>
                           <ChevronRight className="h-3 w-3" />
                         </Link>
                       </div>
 
                       {/* Right lists */}
-                      <div className="col-span-9 grid grid-cols-2 gap-4">
-                        {SOLUTIONS_MEGA.map((gp, sIdx) => (
-                          <div key={sIdx} className="space-y-2">
-                            <span className="text-[10px] font-black tracking-widest text-[#003B7A] uppercase border-b border-slate-100 pb-1 block">
-                              {gp.groupTitle}
-                            </span>
-                            <div className="space-y-1">
-                              {gp.items.map((it) => {
-                                const IconComp = it.icon;
-                                return (
-                                  <Link
-                                    key={it.name}
-                                    to={it.path}
-                                    className="flex items-start gap-2.5 p-2 rounded-lg hover:bg-slate-50 group transition-all"
-                                  >
-                                    <div className="flex h-7 w-7 items-center justify-center rounded bg-blue-50 text-[#007BFF] group-hover:bg-[#007BFF] group-hover:text-white transition-colors mt-0.5 shrink-0">
-                                      <IconComp className="h-4 w-4" />
-                                    </div>
-                                    <div>
-                                      <p className="text-xs font-bold text-slate-800 group-hover:text-[#007BFF] transition-colors">{it.name}</p>
-                                      <p className="text-[9px] text-slate-400 font-semibold">{it.subtitle}</p>
-                                    </div>
-                                  </Link>
-                                );
-                              })}
+                      <div className="col-span-9 grid grid-cols-4 gap-4">
+                        {SOLUTIONS_MEGA.map((gp, sIdx) => {
+                          const CatIcon = gp.icon;
+                          return (
+                            <div key={sIdx} className="space-y-2">
+                              <span className="text-[10px] font-black tracking-widest text-[#003B7A] uppercase border-b border-slate-100 pb-1 flex items-center gap-1">
+                                <CatIcon className="h-3 w-3.5 text-[#007BFF]" />
+                                <span>{gp.groupTitle}</span>
+                              </span>
+                              <div className="space-y-1">
+                                {gp.items.map((it) => {
+                                  const IconComp = it.icon;
+                                  return (
+                                    <Link
+                                      key={it.name}
+                                      to={it.path}
+                                      className="flex items-start gap-2 p-1.5 rounded-lg hover:bg-slate-50 group transition-all"
+                                    >
+                                      <div className="flex h-6 w-6 items-center justify-center rounded bg-blue-50 text-[#007BFF] group-hover:bg-[#007BFF] group-hover:text-white transition-colors mt-0.5 shrink-0">
+                                        <IconComp className="h-3.5 w-3.5" />
+                                      </div>
+                                      <div>
+                                        <p className="text-[10px] font-black text-slate-800 group-hover:text-[#007BFF] transition-colors leading-tight">{it.name}</p>
+                                        <p className="text-[8px] text-slate-400 font-bold leading-tight line-clamp-2 mt-0.5">{it.subtitle}</p>
+                                      </div>
+                                    </Link>
+                                  );
+                                })}
+                              </div>
                             </div>
-                          </div>
-                        ))}
+                          );
+                        })}
                       </div>
                     </motion.div>
                   )}
@@ -713,21 +728,27 @@ export default function Navbar({ onDemoClick }: NavbarProps) {
                       exit={{ opacity: 0, height: 0 }}
                       className="px-4 py-1 space-y-3 shrink-0"
                     >
-                      {SOLUTIONS_MEGA.map((gp) => (
-                        <div key={gp.groupTitle} className="space-y-1">
-                          <p className="text-[10px] font-extrabold text-[#003B7A] tracking-wider uppercase">{gp.groupTitle}</p>
-                          {gp.items.map((it) => (
-                            <Link
-                              key={it.name}
-                              to={it.path}
-                              onClick={() => setMobileMenuOpen(false)}
-                              className="block py-1.5 text-xs text-slate-600 hover:text-[#007BFF] font-semibold"
-                            >
-                              • {it.name}
-                            </Link>
-                          ))}
-                        </div>
-                      ))}
+                      {SOLUTIONS_MEGA.map((gp) => {
+                        const CatIcon = gp.icon;
+                        return (
+                          <div key={gp.groupTitle} className="space-y-1">
+                            <p className="text-[10px] font-extrabold text-[#003B7A] tracking-wider uppercase flex items-center gap-1">
+                              <CatIcon className="h-3.5 w-3.5 text-[#007BFF]" />
+                              <span>{gp.groupTitle}</span>
+                            </p>
+                            {gp.items.map((it) => (
+                              <Link
+                                key={it.name}
+                                to={it.path}
+                                onClick={() => setMobileMenuOpen(false)}
+                                className="block py-1 text-xs text-slate-600 hover:text-[#007BFF] font-semibold pl-4.5"
+                              >
+                                • {it.name}
+                              </Link>
+                            ))}
+                          </div>
+                        );
+                      })}
                     </motion.div>
                   )}
                 </AnimatePresence>

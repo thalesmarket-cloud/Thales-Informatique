@@ -17,6 +17,8 @@ import PageTemplate from "./components/PageTemplate";
 import BlogPostPage from "./components/BlogPostPage";
 import MetiersHubPage from "./components/MetiersHubPage";
 import MetiersDetailPage from "./components/MetiersDetailPage";
+import SolutionsHubPage from "./components/SolutionsHubPage";
+import SolutionsDetailPage from "./components/SolutionsDetailPage";
 import { PAGES_REGISTRY } from "./dataPages";
 
 export default function App() {
@@ -119,6 +121,10 @@ export default function App() {
 
         {/* DEDICATED BLOG POST PAGE */}
         <Route path="/blog/:id" element={<BlogPostPage onDemoClick={handleOpenContact} />} />
+
+        {/* DEDICATED SOLUTIONS SECTIONS */}
+        <Route path="/solutions" element={<SolutionsHubPage onDemoClick={handleOpenContact} />} />
+        <Route path="/solutions/:id" element={<SolutionsDetailPage onDemoClick={handleOpenContact} />} />
 
         {/* DEDICATED METIERS SECTIONS */}
         <Route path="/metiers" element={<MetiersHubPage onDemoClick={handleOpenContact} />} />
