@@ -61,10 +61,10 @@ export default function Solutions({ onDemoClick }: SolutionsProps) {
         {/* Header Block */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <span className="inline-flex items-center gap-1.5 rounded-full bg-[#003B7A]/5 px-3.5 py-1 text-xs font-bold tracking-widest text-[#003B7A] uppercase">
-            NOS SOLUTIONS ERP & SERVICES SAGE
+            NOS SOLUTIONS APPLICATIVES & SERVICES ERP
           </span>
           <h2 className="text-3xl font-extrabold tracking-tight text-[#001B3A] sm:text-4xl md:text-5xl">
-            L'excellence de l'écosystème Sage au Maroc
+            L'excellence de notre écosystème logiciel au Maroc
           </h2>
           <p className="text-slate-600 font-medium text-sm md:text-base leading-relaxed">
             Découvrez une gamme complète d'outils interconnectés capables de centraliser vos ventes, 

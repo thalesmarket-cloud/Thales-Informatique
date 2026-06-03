@@ -3,104 +3,104 @@ import { Solution, Stat, TimelineStep, WhyReason, ErpBenefitComparison, Testimon
 export const SOLUTIONS: Solution[] = [
   {
     id: "sage-x3",
-    name: "Sage X3",
-    category: "ERP Grande Entreprise",
-    subtitle: "La solution ultime pour piloter vos opérations mondiales et locales.",
-    description: "Un ERP complet, flexible et évolutif conçu pour les moyennes et grandes entreprises marocaines des secteurs de l'industrie, de la distribution et des services.",
+    name: "ERP Industriel & Logistique",
+    category: "Système de Gestion Intégrée",
+    subtitle: "La gouvernance globale de vos flux de production et de distribution.",
+    description: "Une plateforme de pilotage d'envergure conçue pour unifier la finance, les achats, les stocks et la production industrielle des ETI et grands groupes marocains.",
     features: [
-      "Gestion financière multidimensionnelle & comptabilité",
-      "Optimisation avancée de la chaîne logistique (SMC)",
-      "Pilotage et planification de la production (GPAO)",
-      "Ventes, CRM & Service client intégrés",
-      "Analyses d'activité et rapports décisionnels intégrés"
+      "Gestion financière multidimensionnelle & consolidation",
+      "Optimisation avancée de la chaîne logistique (SCM) et traçabilité",
+      "Pilotage, planification de charges et ordonnancement (GPAO)",
+      "Automatisation des workflows d'achats et de facturations",
+      "Rapports décisionnels et analyses consolidés temps réel"
     ],
     icon: "ShieldCheck",
-    badge: "Populaire",
-    targetMarket: "Moyennes et Grandes Entreprises (PME/ETI et Groupes)"
+    badge: "Haute Performance",
+    targetMarket: "Moyennes et Grandes Entreprises (ETI, Groupes multisites)"
   },
   {
     id: "sage-100",
-    name: "Sage 100",
-    category: "Gestion PME",
-    subtitle: "Gestion de bout en bout pour PME connectées et agiles.",
-    description: "Une suite de gestion intégrée (Comptabilité, Facturation, Stocks, Achats) parfaitement adaptée pour simplifier le quotidien des PME marocaines en pleine croissance.",
+    name: "Comptabilité & Gestion Commerciale",
+    category: "Progiciel Intégré PME",
+    subtitle: "L'unification connectée de votre gestion commerciale et comptable.",
+    description: "Une suite pragmatique unifiant ventes, achats, facturation et stocks dans une base de données unique pour fluidifier l'activité quotidienne des PME.",
     features: [
-      "Comptabilité générale, analytique et budgétaire",
-      "Gestion commerciale et facturation électronique",
-      "Suivi précis des stocks et gestion des approvisionnements",
+      "Comptabilité générale, analytique poussée et budgétaire",
+      "Gestion commerciale complète et facturation d'affaires",
+      "Suivi rigoureux des stocks et alerte de réapprovisionnement",
       "Automatisation des flux de trésorerie et rapprochements bancaires",
-      "Intégration native avec Excel pour des tableaux de bord agiles"
+      "Interrogation à chaud pour vos tableaux Excel opérationnels"
     ],
     icon: "TrendingUp",
-    badge: "Essentiel",
+    badge: "Indispensable PME",
     targetMarket: "Petites et Moyennes Entreprises de 10 à 250 collaborateurs"
   },
   {
     id: "sage-paie-rh",
-    name: "Sage Paie & RH",
-    category: "Ressources Humaines",
-    subtitle: "Conformité légale et gestion optimale du capital humain.",
-    description: "Produisez une paie 100% conforme à la législation marocaine (IR, CNSS, CIMR, AMO) et optimisez la gestion des carrières, congés et compétences.",
+    name: "Paie & Gestion des Collaborateurs",
+    category: "Administration & RH",
+    subtitle: "Une paie fiable conforme et la dématérialisation des flux RH.",
+    description: "Pilotez sereinement l'ensemble de vos ressources humaines, du calcul fiable des rémunérations à la gestion connectée des absences et compétences.",
     features: [
-      "Calcul de paie d'une fiabilité absolue (législation marocaine)",
-      "Portail RH collaboratif pour poser congés et notes de frais",
-      "Déclarations sociales automatisées (télédéclaration Damancom)",
-      "Gestion des talents, recrutements, formations et entretiens",
-      "Édition ergonomique des fiches de paie et états récapitulatifs"
+      "Calcul de paie d'une totale conformité réglementaire locale",
+      "Portail salarié de demande de congés et notes de frais",
+      "Déclarations sociales automatisées et transmission EDI",
+      "Suivi des plans de carrières, d'entretiens et d'onboarding",
+      "Suivi automatique du temps de présence et modulation horaire"
     ],
     icon: "Users",
-    badge: "Conforme Maroc",
-    targetMarket: "DRH et Responsables Paie de tout secteur"
+    badge: "Conformité Légale",
+    targetMarket: "DRH, Directeurs Administratifs et Services Rémunérations"
   },
   {
     id: "sage-crm",
-    name: "Sage CRM",
-    category: "Relation Client",
-    subtitle: "Fidélisez vos clients et maximisez vos ventes.",
-    description: "Suivez vos opportunités commerciales, pilotez vos campagnes marketing et offrez un service après-vente d'exception grâce à une vision client à 360°.",
+    name: "CRM & Gestion de la Relation Client",
+    category: "Relation Client & SAV",
+    subtitle: "Fidélisation de vos partenaires et maximisation du tunnel de vente.",
+    description: "Pilotez vos opportunités commerciales pas-à-pas, qualifiez vos actions marketing et structurez une activité d'assistance SAV d'exception.",
     features: [
-      "Gestion de pipe commercial et prévisions de ventes de l'équipe",
-      "Historique complet des interactions clients pour le SAV",
-      "Automatisation et ciblage des campagnes de marketing multicanal",
-      "Accès mobile pour les commerciaux sur le terrain au Maroc",
-      "Connectivité fluide avec Sage 100 et Sage X3"
+      "Visualisation graphique du pipe et prévisions fiables des ventes",
+      "Historique complet de la relation et des appels pour le SAV",
+      "Ciblage qualitatif de vos campagnes marketing multicanales",
+      "Accès mobile d'affaires en mobilité pour les commerciaux itinérants",
+      "Liaison étanche avec vos applications de facturation courantes"
     ],
     icon: "HeartHandshake",
     targetMarket: "Équipes Commerciales, Marketing et Service Client"
   },
   {
     id: "sage-bi",
-    name: "Sage BI Reporting",
-    category: "Business Intelligence",
-    subtitle: "Décidez en temps réel avec des indicateurs sur-mesure.",
-    description: "Connectez vos bases de données de gestion directement à Excel® et construisez des tableaux de bord dynamiques pour piloter votre trésorerie, vos ventes et votre marge.",
+    name: "Business Intelligence & Décisionnel",
+    category: "Analyses de Données",
+    subtitle: "Pilotez vos résultats à chaud grâce à des tableaux dynamiques.",
+    description: "Connectez vos outils de gestion de manière directe pour formuler des indicateurs visuels d'aide à la décision sans aucune perte de temps.",
     features: [
-      "Génération automatique d'états de synthèse fiables",
-      "Interrogation en direct des logiciels de gestion à l'instant T",
-      "Mise en place de KPIs stratégiques sur-mesure",
-      "Partage automatique des rapports aux directeurs et managers",
-      "Prise en main immédiate dans l'environnement Excel familier"
+      "Génération automatique d'états de synthèse fiables et croisés",
+      "Interrogation en direct sans ressaisie de vos bases de données",
+      "Conception de KPIs personnalisés selon vos objectifs financiers",
+      "Partage automatique et sécurisé de rapports aux directeurs",
+      "Environnement d'analyse souple et familier pour les DAF"
     ],
     icon: "BarChart3",
-    badge: "Nouveau",
-    targetMarket: "Directeurs Financiers, DG et Contrôleurs de gestion"
+    badge: "Efficience Décisionnelle",
+    targetMarket: "Directeurs Financiers, Contrôleurs de gestion et DG de groupe"
   },
   {
     id: "conseil-accompagnement",
-    name: "Conseil & Intégration",
-    category: "Services Thalès Informatique",
-    subtitle: "L'excellence méthodologique pour votre réussite.",
-    description: "Bénéficiez de 30 ans d'expertise accumulée par nos ingénieurs consultants certifiés, pour un déploiement sécurisé, performant et sur-mesure.",
+    name: "Conseil & Intégration de Systèmes",
+    category: "Services Thalès",
+    subtitle: "L'excellence d'une méthodologie d'audit éprouvée.",
+    description: "Profitez de l'expertise de nos consultants pour un plan d'intégration sécurisé, d'une modélisation logicielle affinée et d'une prise en main soignée.",
     features: [
-      "Audit technique et fonctionnel approfondi de vos processus actuels",
-      "Pilotage de projet selon des standards internationaux d'intégration",
-      "Développements spécifiques et connecteurs d'applications métiers",
-      "Formation intensive de vos équipes pour une adoption immédiate",
-      "Contrat de support Premium avec SLA garanti et interlocuteur dédié"
+      "Audit fonctionnel complet de vos flux et processus terrain",
+      "Méthodologie de déploiement structurée de bout en bout",
+      "Développement de connecteurs sur-mesure et d'APIs applicatives",
+      "Formation ciblée par rôle utilisateur pour une adoption rapide",
+      "Support d'experts de proximité pour sécuriser votre production"
     ],
     icon: "Lightbulb",
-    badge: "Sur-mesure",
-    targetMarket: "Toutes entreprises souhaitant réussir leur transition numérique"
+    badge: "Accompagnement 360",
+    targetMarket: "Toutes organisations en cours de modernisation de leur SI"
   }
 ];
 
